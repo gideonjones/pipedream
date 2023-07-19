@@ -46,7 +46,7 @@ export default {
     if (hash !== shopifyHmac) {
       console.log("Invalid webhook signature, unauthorized");
       console.log(shopifyHmac, hash);
-      return $.flow.exit("Invalid webhook signature.");
+      return false;
     }
 
     return true;
